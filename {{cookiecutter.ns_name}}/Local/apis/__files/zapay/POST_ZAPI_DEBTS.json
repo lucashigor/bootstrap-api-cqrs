@@ -1,0 +1,36 @@
+{
+  "customer": {
+    "email": "vitorf@ciandt.com",
+    "phone": "1932711874"
+  },
+  "protocol": "3GM7HLZP",
+  "debts": [
+    {
+      "amount": 132.5,
+      "auto_infraction": "1K4270936  ",
+      "description": "Trans. Veloc. Super. a Maxima Permitida em Ate 20%. - 1K4270936  ",
+      "due_date": "2020-04-29 00:00:00",
+      "issuing_agency": "D.E.R.",
+      "title": "Infração de Trânsito",
+      "type": "ticket",
+      "id": "YUCV2UOCD5YE"
+    },
+    {
+      "amount": 212.6,
+      "description": "Transferência Atual",
+      "expiration_date": null,
+      "title": "Transferência",
+      "type": "transfer",
+      "id": "8I8CKX15PZ8S",
+      "depends_on": [
+        "YUCV2UOCD5YE"
+      ]
+    }
+  ],
+  "vehicle": {
+    "renavam": "01078530944",
+    "license_plate": "FPN6494",
+    "owner": null,
+    "document": null
+  }
+}

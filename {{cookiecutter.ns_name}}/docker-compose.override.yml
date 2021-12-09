@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+  adasit.__cookiecutter.project_name__.webapi:
+    depends_on: 
+    - "__cookiecutter.ns_name__-sql-server-db"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      __cookiecutter.ns_name__-sql-server-db:
+  container_name: __cookiecutter.ns_name__-sql-server-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Adasit#12"
+      ACCEPT_EULA: "Y"
+  __cookiecutter_ns_name__-flyway:
+    depends_on: 
+    - "__cookiecutter.ns_name__-sql-server-db"
+    container_name: __cookiecutter.ns_name__-flyway
+    build:
+      context: ./flyway
+      dockerfile: Dockerfile
+    volumes:
+    - ./flyway/sql:/flyway/sql
+    - ./Local/database/dev-data:/flyway/sql/dev-data
+    - ./Local/database/conf:/flyway/conf
+    entrypoint: ["bash", "/flyway/wait-for-it.sh", "__cookiecutter.ns_name__-sql-server-db:1433", "-t", "240", "--", "flyway"]
+    command: "migrate"
+  __cookiecutter_ns_name__-wiremock:
+    container_name: __cookiecutter.ns_name__-wiremock
+    image: rodolpheche/wiremock
+    ports:
+    - "8080:8080"
+    volumes:
+    - ./Local/apis/:/home/wiremock  

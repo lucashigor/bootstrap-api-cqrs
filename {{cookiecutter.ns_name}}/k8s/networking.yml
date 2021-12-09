@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: {{cookiecutter.ns_name}}
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    #nginx.ingress.kubernetes.io/app-root: /v1
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: nginx
+
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /{{cookiecutter.ns_name}}/?(.*)
+            backend:
+              serviceName: {{cookiecutter.ns_name}}
+              servicePort: 80

@@ -1,0 +1,25 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /src
+COPY ["AdasIt.{{cookiecutter.project_name}}.WebApi/AdasIt.{{cookiecutter.project_name}}.WebApi.csproj", "AdasIt.{{cookiecutter.project_name}}.WebApi/"]
+COPY ["AdasIt.{{cookiecutter.project_name}}.Kernel/AdasIt.{{cookiecutter.project_name}}.Kernel.csproj", "AdasIt.{{cookiecutter.project_name}}.Kernel/"]
+COPY ["AdasIt.{{cookiecutter.project_name}}.Infra/AdasIt.{{cookiecutter.project_name}}.Infra.csproj", "AdasIt.{{cookiecutter.project_name}}.Infra/"]
+COPY ["AdasIt.{{cookiecutter.project_name}}.Core/AdasIt.{{cookiecutter.project_name}}.Core.csproj", "AdasIt.{{cookiecutter.project_name}}.Core/"]
+RUN dotnet restore "AdasIt.{{cookiecutter.project_name}}.WebApi/AdasIt.{{cookiecutter.project_name}}.WebApi.csproj"
+COPY . .
+WORKDIR "/src/AdasIt.{{cookiecutter.project_name}}.WebApi"
+RUN dotnet build "AdasIt.{{cookiecutter.project_name}}.WebApi.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "AdasIt.{{cookiecutter.project_name}}.WebApi.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "AdasIt.{{cookiecutter.project_name}}.WebApi.dll"]

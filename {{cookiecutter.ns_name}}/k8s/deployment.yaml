@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{cookiecutter.ns_name}}
+  labels:
+    app: {{cookiecutter.ns_name}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{cookiecutter.ns_name}}
+  template:
+    metadata:
+      labels:
+        app: {{cookiecutter.ns_name}}
+    spec:
+      containers:
+      - name: {{cookiecutter.ns_name}}
+        image: prdvarejoregistry.azurecr.io/{{cookiecutter.ns_name}}:__VERSION__
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/config
+      imagePullSecrets:
+      - name: acr-secret-prdvarejoregistry
+      volumes:
+      - name: config-volume
+        configMap:
+          name: {{cookiecutter.ns_name}}

@@ -1,0 +1,1 @@
+if exist APP\drop\flyway\conf\flyway.conf APP\drop\flyway\flyway migrate 

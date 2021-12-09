@@ -1,0 +1,26 @@
+﻿using AdasIt.__cookiecutter.project_name__.Core.ServiceBus;
+using Azure.Messaging.ServiceBus;
+using Microsoft.Extensions.Configuration;
+using System.Diagnostics.CodeAnalysis;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+namespace AdasIt.__cookiecutter.project_name__.Infra.Services
+{
+    [ExcludeFromCodeCoverage]
+    public class ServiceBusService : IServiceBusService
+    {
+        private readonly string connectionString;
+        public ServiceBusService(IConfiguration configuration)
+        {
+            this.connectionString = configuration["serviceBusSender"];
+        }
+
+        public async Task SendMessageToTopicAsync(string topicName, object entity)
+        {
+            await using ServiceBusClient client = new (connectionString);
+            ServiceBusSender sender = client.CreateSender(topicName);
+            await sender.SendMessageAsync(new ServiceBusMessage(JsonSerializer.Serialize(entity)));
+        }
+    }
+}
