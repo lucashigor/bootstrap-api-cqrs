@@ -1,6 +1,6 @@
 
 # Cookiecutter Api's ConnectCar
-[![#](https://img.shields.io/badge/.netcore-v3.1-blue)](#)
+[![#](https://img.shields.io/badge/.netc-v5.0-green)](#)
 
 Esse cookiecutter é um gerador de projeto base para as novas APIs do Varejo.
 
