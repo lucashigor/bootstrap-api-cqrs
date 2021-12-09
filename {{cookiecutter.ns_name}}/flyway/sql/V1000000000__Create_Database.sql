@@ -1,2 +1,2 @@
-CREATE DATABASE {{cookiecutter.ns_name}}-principal;
+CREATE DATABASE {{cookiecutter.project_name}}Principal;
 GO

@@ -12,6 +12,7 @@ WORKDIR /app
 
 COPY --from=build-env /app/out .
 RUN apk add icu-libs
+RUN dotnet dev-certs https --trust
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 
 ENTRYPOINT ["dotnet", "ConectCar.{{cookiecutter.project_name}}.WebApi.dll"]

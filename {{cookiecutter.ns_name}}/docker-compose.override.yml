@@ -2,7 +2,6 @@ version: '3.4'
 
 services:
   adasit.{{cookiecutter.project_name}}.webapi:
-    container_name: adasit.{{cookiecutter.ns_name}}.webapi
     depends_on: 
     - "{{cookiecutter.ns_name}}-sql-server-db"
     environment:
@@ -45,15 +44,15 @@ services:
     networks:
       - {{cookiecutter.ns_name}}-network
       
-    {{cookiecutter.ns_name}}-wiremock:
+  {{cookiecutter.ns_name}}-wiremock:
     container_name: {{cookiecutter.ns_name}}-wiremock
     image: rodolpheche/wiremock
     ports:
     - "8080:8080"
     volumes:
     - ./Local/apis/:/home/wiremock
-networks:
-    - {{cookiecutter.ns_name}}-network
+    networks:
+        - {{cookiecutter.ns_name}}-network
 
 networks:
   {{cookiecutter.ns_name}}-network:

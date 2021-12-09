@@ -1,4 +1,4 @@
-USE {{cookiecutter.ns_name}}-principal;
+USE {{cookiecutter.project_name}}Principal;
 GO
 
 CREATE TABLE [dbo].[Configurations](
