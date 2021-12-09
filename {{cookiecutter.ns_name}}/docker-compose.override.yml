@@ -13,14 +13,14 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-      {{cookiecutter.ns_name}}-sql-server-db:
-  container_name: {{cookiecutter.ns_name}}-sql-server-db
+  {{cookiecutter.ns_name}}-sql-server-db:
+    container_name: {{cookiecutter.ns_name}}-sql-server-db
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
-      - "1433:1433"
+    - "1433:1433"
     environment:
-      SA_PASSWORD: "Adasit#12"
-      ACCEPT_EULA: "Y"
+        SA_PASSWORD: "Adasit#12"
+        ACCEPT_EULA: "Y"
   {{cookiecutter.ns_name}}-flyway:
     depends_on: 
     - "{{cookiecutter.ns_name}}-sql-server-db"
