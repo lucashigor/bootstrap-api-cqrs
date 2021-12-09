@@ -1,11 +1,11 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.ServiceBus;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.ServiceBus;
 using Azure.Messaging.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Infra.Services
+namespace AdasIt.{{cookiecutter.project_name}}.Infra.Services
 {
     [ExcludeFromCodeCoverage]
     public class ServiceBusService : IServiceBusService

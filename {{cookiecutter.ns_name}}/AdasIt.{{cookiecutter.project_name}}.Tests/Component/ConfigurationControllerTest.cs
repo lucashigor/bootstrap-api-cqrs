@@ -1,9 +1,9 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Models;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace AdasIt.__cookiecutter.project_name__.Tests.Component
+namespace AdasIt.{{cookiecutter.project_name}}.Tests.Component
 {
     public class ConfigurationControllerTest : IClassFixture<IntegrationTestFixture>
     {

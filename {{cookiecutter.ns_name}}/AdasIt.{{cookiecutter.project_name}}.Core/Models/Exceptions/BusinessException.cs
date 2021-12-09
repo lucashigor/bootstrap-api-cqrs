@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Mime;
 using System.Runtime.Serialization;
 
-namespace AdasIt.__cookiecutter.project_name__.Core.Models.Exceptions
+namespace AdasIt.{{cookiecutter.project_name}}.Core.Models.Exceptions
 {
     [Serializable]
     public class BusinessException : Exception

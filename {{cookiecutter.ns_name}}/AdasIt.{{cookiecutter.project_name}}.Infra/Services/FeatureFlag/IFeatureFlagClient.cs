@@ -1,9 +1,9 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Models;
-using AdasIt.__cookiecutter.project_name__.Infra.Services.FeatureFlag.Request;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Models;
+using AdasIt.{{cookiecutter.project_name}}.Infra.Services.FeatureFlag.Request;
 using Refit;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Infra.Services.FeatureFlag
+namespace AdasIt.{{cookiecutter.project_name}}.Infra.Services.FeatureFlag
 {
     public interface IFeatureFlagClient
     {

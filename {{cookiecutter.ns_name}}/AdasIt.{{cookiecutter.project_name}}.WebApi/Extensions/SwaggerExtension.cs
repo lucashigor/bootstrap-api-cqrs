@@ -1,10 +1,10 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Constants;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Constants;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 
-namespace AdasIt.__cookiecutter.project_name__.WebApi.Extensions
+namespace AdasIt.{{cookiecutter.project_name}}.WebApi.Extensions
 {
     public static class SwaggerExtension
     {

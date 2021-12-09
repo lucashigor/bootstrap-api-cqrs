@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdasIt.__cookiecutter.project_name__.Kernel.Extensions
+namespace AdasIt.{{cookiecutter.project_name}}.Kernel.Extensions
 {
     public static class AutoMapperProfilesExtension
     {

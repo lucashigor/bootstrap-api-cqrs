@@ -1,8 +1,8 @@
-﻿using AdasIt.__cookiecutter.project_name__.WebApi.Middlewares;
+﻿using AdasIt.{{cookiecutter.project_name}}.WebApi.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AdasIt.__cookiecutter.project_name__.WebApi.Extensions
+namespace AdasIt.{{cookiecutter.project_name}}.WebApi.Extensions
 {
     public static class GlobalExceptionHandlerMiddlewareExtension
     {

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>AdasIt.__cookiecutter.project_name__.Tests</RootNamespace>
+    <RootNamespace>AdasIt.{{cookiecutter.project_name}}.Tests</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdasIt.{{cookiecutter.project_name}}.WebApi\AdasIt.__cookiecutter.project_name__.WebApi.csproj" />
+    <ProjectReference Include="..\AdasIt.{{cookiecutter.project_name}}.WebApi\AdasIt.{{cookiecutter.project_name}}.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

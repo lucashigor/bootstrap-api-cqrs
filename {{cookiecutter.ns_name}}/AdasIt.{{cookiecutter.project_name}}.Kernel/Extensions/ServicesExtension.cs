@@ -1,9 +1,9 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.ServiceBus;
-using AdasIt.__cookiecutter.project_name__.Infra.Services;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.ServiceBus;
+using AdasIt.{{cookiecutter.project_name}}.Infra.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AdasIt.__cookiecutter.project_name__.Kernel.Extensions
+namespace AdasIt.{{cookiecutter.project_name}}.Kernel.Extensions
 {
     public static class ServicesExtension
     {

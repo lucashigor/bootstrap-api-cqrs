@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AdasIt.__cookiecutter.project_name__.Infra.Services.FeatureFlag.Request
+namespace AdasIt.{{cookiecutter.project_name}}.Infra.Services.FeatureFlag.Request
 {
     public class RequestDto
     {

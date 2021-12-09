@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 
-namespace AdasIt.__cookiecutter.project_name__.Tests.Utils
+namespace AdasIt.{{cookiecutter.project_name}}.Tests.Utils
 {
     public class MyMemoryCache
     {

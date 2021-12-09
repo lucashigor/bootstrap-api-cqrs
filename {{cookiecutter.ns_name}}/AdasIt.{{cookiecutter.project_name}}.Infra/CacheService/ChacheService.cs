@@ -1,11 +1,11 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Infra;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Infra;
 using StackExchange.Redis;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Infra.CacheService
+namespace AdasIt.{{cookiecutter.project_name}}.Infra.CacheService
 {
     [ExcludeFromCodeCoverage]
     public class CacheService : ICacheService

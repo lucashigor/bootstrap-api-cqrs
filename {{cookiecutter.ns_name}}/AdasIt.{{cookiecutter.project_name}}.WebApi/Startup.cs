@@ -1,6 +1,6 @@
-using AdasIt.__cookiecutter.project_name__.Core.Command.Handlers;
-using AdasIt.__cookiecutter.project_name__.Kernel.Extensions;
-using AdasIt.__cookiecutter.project_name__.WebApi.Extensions;
+using AdasIt.{{cookiecutter.project_name}}.Core.Command.Handlers;
+using AdasIt.{{cookiecutter.project_name}}.Kernel.Extensions;
+using AdasIt.{{cookiecutter.project_name}}.WebApi.Extensions;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 using System;
 using System.Reflection;
 
-namespace AdasIt.__cookiecutter.project_name__.WebApi
+namespace AdasIt.{{cookiecutter.project_name}}.WebApi
 {
     public class Startup
     {
@@ -75,7 +75,7 @@ namespace AdasIt.__cookiecutter.project_name__.WebApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AdasIt.__cookiecutter.project_name__.WebApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AdasIt.{{cookiecutter.project_name}}.WebApi v1"));
             }
 
             app.UseHttpsRedirection();

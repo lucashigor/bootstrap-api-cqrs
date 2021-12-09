@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  adasit.__cookiecutter.project_name__.webapi:
+  adasit.{{cookiecutter.project_name}}.webapi:
     depends_on: 
     - "{{cookiecutter.ns_name}}-sql-server-db"
     environment:

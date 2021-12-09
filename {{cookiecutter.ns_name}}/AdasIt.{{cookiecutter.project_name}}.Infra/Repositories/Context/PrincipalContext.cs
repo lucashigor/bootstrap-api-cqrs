@@ -1,7 +1,7 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Models;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AdasIt.__cookiecutter.project_name__.Infra.Repositories.Context
+namespace AdasIt.{{cookiecutter.project_name}}.Infra.Repositories.Context
 {
     public class PrincipalContext : DbContext
     {

@@ -1,7 +1,7 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Models.Exceptions;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Models.Exceptions;
 using System.Collections.Generic;
 
-namespace AdasIt.__cookiecutter.project_name__.Core.Notifications
+namespace AdasIt.{{cookiecutter.project_name}}.Core.Notifications
 {
     public class Notifier
     {

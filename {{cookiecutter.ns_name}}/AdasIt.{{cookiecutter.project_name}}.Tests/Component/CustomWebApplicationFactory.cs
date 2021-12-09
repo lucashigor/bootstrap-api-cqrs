@@ -1,7 +1,7 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Infra;
-using AdasIt.__cookiecutter.project_name__.Core.ServiceBus;
-using AdasIt.__cookiecutter.project_name__.Infra.Repositories.Context;
-using AdasIt.__cookiecutter.project_name__.Tests.Utils;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Infra;
+using AdasIt.{{cookiecutter.project_name}}.Core.ServiceBus;
+using AdasIt.{{cookiecutter.project_name}}.Infra.Repositories.Context;
+using AdasIt.{{cookiecutter.project_name}}.Tests.Utils;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Linq;
 
-namespace AdasIt.__cookiecutter.project_name__.Tests.Component
+namespace AdasIt.{{cookiecutter.project_name}}.Tests.Component
 {
     public class CustomWebApplicationFactory<TStartup>
         : WebApplicationFactory<TStartup> where TStartup : class

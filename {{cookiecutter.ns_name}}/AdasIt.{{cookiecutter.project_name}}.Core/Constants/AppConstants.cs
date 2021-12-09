@@ -1,4 +1,4 @@
-﻿namespace AdasIt.__cookiecutter.project_name__.Core.Constants
+﻿namespace AdasIt.{{cookiecutter.project_name}}.Core.Constants
 {
     public static class AppConstants
     {

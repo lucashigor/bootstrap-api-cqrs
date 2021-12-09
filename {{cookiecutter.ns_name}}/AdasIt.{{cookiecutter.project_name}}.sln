@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdasIt.__cookiecutter.project_name__.WebApi", "AdasIt.{{cookiecutter.project_name}}.WebApi\AdasIt.__cookiecutter.project_name__.WebApi.csproj", "{F50679FC-15E6-40CE-B937-388629CD8190}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdasIt.{{cookiecutter.project_name}}.WebApi", "AdasIt.{{cookiecutter.project_name}}.WebApi\AdasIt.{{cookiecutter.project_name}}.WebApi.csproj", "{F50679FC-15E6-40CE-B937-388629CD8190}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdasIt.{{cookiecutter.project_name}}.Core", "AdasIt.{{cookiecutter.project_name}}.Core\AdasIt.{{cookiecutter.project_name}}.Core.csproj", "{2B9BC759-2D93-456D-9467-D28D9F4DBBB9}"
 EndProject

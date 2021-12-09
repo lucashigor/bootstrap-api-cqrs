@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>AdasIt.__cookiecutter.project_name__.Infra</RootNamespace>
+    <RootNamespace>AdasIt.{{cookiecutter.project_name}}.Infra</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,8 +1,8 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Command.Models;
-using AdasIt.__cookiecutter.project_name__.Core.Models;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Command.Models;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Core.Infra.Repositories
+namespace AdasIt.{{cookiecutter.project_name}}.Core.Infra.Repositories
 {
     public interface IConfigurationsRepository
     {

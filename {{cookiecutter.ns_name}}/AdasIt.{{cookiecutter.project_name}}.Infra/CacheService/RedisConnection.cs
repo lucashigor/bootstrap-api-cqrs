@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace AdasIt.__cookiecutter.project_name__.Infra.CacheService
+namespace AdasIt.{{cookiecutter.project_name}}.Infra.CacheService
 {
     public interface IRedisConnection
     {

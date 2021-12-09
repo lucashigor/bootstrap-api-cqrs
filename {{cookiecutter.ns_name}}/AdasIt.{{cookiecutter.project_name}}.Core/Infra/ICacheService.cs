@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Core.Infra
+namespace AdasIt.{{cookiecutter.project_name}}.Core.Infra
 {
     public interface ICacheService
     {

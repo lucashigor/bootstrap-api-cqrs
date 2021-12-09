@@ -1,10 +1,10 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Constants;
-using AdasIt.__cookiecutter.project_name__.Core.Models;
-using AdasIt.__cookiecutter.project_name__.Core.Models.Exceptions;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Constants;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
-namespace AdasIt.__cookiecutter.project_name__.WebApi.Extensions
+namespace AdasIt.{{cookiecutter.project_name}}.WebApi.Extensions
 {
     public static class ActionContextExtension
     {

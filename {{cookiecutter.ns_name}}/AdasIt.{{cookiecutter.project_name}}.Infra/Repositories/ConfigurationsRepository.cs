@@ -1,11 +1,11 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Command.Models;
-using AdasIt.__cookiecutter.project_name__.Core.Infra.Repositories;
-using AdasIt.__cookiecutter.project_name__.Core.Models;
-using AdasIt.__cookiecutter.project_name__.Infra.Repositories.Context;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Command.Models;
+using AdasIt.{{cookiecutter.project_name}}.Core.Infra.Repositories;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models;
+using AdasIt.{{cookiecutter.project_name}}.Infra.Repositories.Context;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Infra.Repositories
+namespace AdasIt.{{cookiecutter.project_name}}.Infra.Repositories
 {
     public class ConfigurationsRepository : IConfigurationsRepository
     {

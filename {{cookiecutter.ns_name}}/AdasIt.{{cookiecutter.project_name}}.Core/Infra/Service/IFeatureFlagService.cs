@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Core.Infra.Service
+namespace AdasIt.{{cookiecutter.project_name}}.Core.Infra.Service
 {
     public interface IFeatureFlagService
     {

@@ -1,10 +1,10 @@
-﻿using AdasIt.__cookiecutter.project_name__.Infra.Services.FeatureFlag;
+﻿using AdasIt.{{cookiecutter.project_name}}.Infra.Services.FeatureFlag;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Refit;
 using System;
 
-namespace AdasIt.__cookiecutter.project_name__.Kernel.Extensions
+namespace AdasIt.{{cookiecutter.project_name}}.Kernel.Extensions
 {
     public static class HttpClientsExtension
     {

@@ -1,10 +1,10 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Command.Models;
-using AdasIt.__cookiecutter.project_name__.Core.Infra.Repositories;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Command.Models;
+using AdasIt.{{cookiecutter.project_name}}.Core.Infra.Repositories;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Core.Command.Handlers
+namespace AdasIt.{{cookiecutter.project_name}}.Core.Command.Handlers
 {
     public class ConfigurationCommandHandler : IRequestHandler<CreateConfigurationRequestModel, CreateConfigurationResponseModel>
     {

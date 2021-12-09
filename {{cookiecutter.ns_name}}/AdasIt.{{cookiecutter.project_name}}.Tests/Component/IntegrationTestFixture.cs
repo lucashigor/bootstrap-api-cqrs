@@ -1,7 +1,7 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Models;
-using AdasIt.__cookiecutter.project_name__.Core.Models.Exceptions;
-using AdasIt.__cookiecutter.project_name__.Infra.Repositories.Context;
-using AdasIt.__cookiecutter.project_name__.WebApi;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Models;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models.Exceptions;
+using AdasIt.{{cookiecutter.project_name}}.Infra.Repositories.Context;
+using AdasIt.{{cookiecutter.project_name}}.WebApi;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System;
@@ -17,7 +17,7 @@ using WireMock.ResponseBuilders;
 using WireMock.Server;
 using Xunit;
 
-namespace AdasIt.__cookiecutter.project_name__.Tests.Component
+namespace AdasIt.{{cookiecutter.project_name}}.Tests.Component
 {
     public class IntegrationTestFixture : CustomWebApplicationFactory<Startup>
     {

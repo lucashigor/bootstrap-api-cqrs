@@ -1,14 +1,14 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Constants;
-using AdasIt.__cookiecutter.project_name__.Core.Infra.Service;
-using AdasIt.__cookiecutter.project_name__.Core.Models;
-using AdasIt.__cookiecutter.project_name__.Core.Models.Exceptions;
-using AdasIt.__cookiecutter.project_name__.Infra.Services.FeatureFlag.Request;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Constants;
+using AdasIt.{{cookiecutter.project_name}}.Core.Infra.Service;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models.Exceptions;
+using AdasIt.{{cookiecutter.project_name}}.Infra.Services.FeatureFlag.Request;
 using Refit;
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Infra.Services.FeatureFlag
+namespace AdasIt.{{cookiecutter.project_name}}.Infra.Services.FeatureFlag
 {
     public class FeatureFlagService : IFeatureFlagService
     {

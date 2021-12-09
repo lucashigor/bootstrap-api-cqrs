@@ -18,7 +18,7 @@
         "ListOfAllowedAPIKeys": "0031158b-6356-4673-93e8-a70f38e62336;"
       }
     },
-    "AdasIt.__cookiecutter.project_name__.WebApi": {
+    "AdasIt.{{cookiecutter.project_name}}.WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

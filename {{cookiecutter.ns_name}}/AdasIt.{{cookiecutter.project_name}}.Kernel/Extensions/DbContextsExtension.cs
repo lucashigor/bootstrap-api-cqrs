@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
-using AdasIt.__cookiecutter.project_name__.Infra.Repositories.Context;
+using AdasIt.{{cookiecutter.project_name}}.Infra.Repositories.Context;
 using Microsoft.EntityFrameworkCore;
-using AdasIt.__cookiecutter.project_name__.Core.Infra.Repositories;
-using AdasIt.__cookiecutter.project_name__.Infra.Repositories;
+using AdasIt.{{cookiecutter.project_name}}.Core.Infra.Repositories;
+using AdasIt.{{cookiecutter.project_name}}.Infra.Repositories;
 
-namespace AdasIt.__cookiecutter.project_name__.Kernel.Extensions
+namespace AdasIt.{{cookiecutter.project_name}}.Kernel.Extensions
 {
     public static class DbContextsExtension
     {

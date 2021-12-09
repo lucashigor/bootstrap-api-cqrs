@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.WebApi
+namespace AdasIt.{{cookiecutter.project_name}}.WebApi
 {
     public class Program
     {

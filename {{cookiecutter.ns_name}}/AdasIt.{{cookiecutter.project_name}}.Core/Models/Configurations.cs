@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdasIt.__cookiecutter.project_name__.Core.Models
+namespace AdasIt.{{cookiecutter.project_name}}.Core.Models
 {
     public class Configurations
     {

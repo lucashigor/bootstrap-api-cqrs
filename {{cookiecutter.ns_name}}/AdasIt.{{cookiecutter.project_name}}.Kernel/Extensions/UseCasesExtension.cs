@@ -1,7 +1,7 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Notifications;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Notifications;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AdasIt.__cookiecutter.project_name__.Kernel.Extensions
+namespace AdasIt.{{cookiecutter.project_name}}.Kernel.Extensions
 {
     public static class UseCasesExtension
     {

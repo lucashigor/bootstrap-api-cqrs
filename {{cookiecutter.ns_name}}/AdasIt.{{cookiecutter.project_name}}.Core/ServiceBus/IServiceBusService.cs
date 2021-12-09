@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Core.ServiceBus
+namespace AdasIt.{{cookiecutter.project_name}}.Core.ServiceBus
 {
     public interface IServiceBusService
     {

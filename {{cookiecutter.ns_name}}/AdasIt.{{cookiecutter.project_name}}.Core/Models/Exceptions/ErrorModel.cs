@@ -1,4 +1,4 @@
-﻿namespace AdasIt.__cookiecutter.project_name__.Core.Models.Exceptions
+﻿namespace AdasIt.{{cookiecutter.project_name}}.Core.Models.Exceptions
 {
     public class ErrorModel
     {

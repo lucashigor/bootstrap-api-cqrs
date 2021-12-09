@@ -1,6 +1,6 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Constants;
-using AdasIt.__cookiecutter.project_name__.Core.Models;
-using AdasIt.__cookiecutter.project_name__.Core.Models.Exceptions;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Constants;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models;
+using AdasIt.{{cookiecutter.project_name}}.Core.Models.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,7 +9,7 @@ using System.Net.Mime;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.WebApi.Middlewares
+namespace AdasIt.{{cookiecutter.project_name}}.WebApi.Middlewares
 {
     public class GlobalExceptionHandlerMiddleware : IMiddleware
     {

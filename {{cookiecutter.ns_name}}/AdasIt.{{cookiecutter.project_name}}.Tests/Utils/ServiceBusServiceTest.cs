@@ -1,9 +1,9 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.ServiceBus;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.ServiceBus;
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Tests.Utils
+namespace AdasIt.{{cookiecutter.project_name}}.Tests.Utils
 {
     public class ServiceBusServiceTest : IServiceBusService
     {

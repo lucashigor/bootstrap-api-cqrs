@@ -1,10 +1,10 @@
-﻿using AdasIt.__cookiecutter.project_name__.Core.Infra;
+﻿using AdasIt.{{cookiecutter.project_name}}.Core.Infra;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.Tests.Utils
+namespace AdasIt.{{cookiecutter.project_name}}.Tests.Utils
 {
     public class CacheServiceTest : ICacheService
     {

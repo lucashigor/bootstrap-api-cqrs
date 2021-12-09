@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Net.Mime;
 using System.Threading.Tasks;
 
-namespace AdasIt.__cookiecutter.project_name__.WebApi.Filters
+namespace AdasIt.{{cookiecutter.project_name}}.WebApi.Filters
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = true)]
     public sealed class AuthenticationAttribute : Attribute, IAsyncAuthorizationFilter, IAuthorizationFilter, IOrderedFilter
