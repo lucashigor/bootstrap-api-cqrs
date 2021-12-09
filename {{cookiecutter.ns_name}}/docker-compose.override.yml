@@ -2,10 +2,11 @@ version: '3.4'
 
 services:
   adasit.{{cookiecutter.project_name}}.webapi:
+    container_name: adasit.{{cookiecutter.ns_name}}.webapi
     depends_on: 
     - "{{cookiecutter.ns_name}}-sql-server-db"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Mock
       - ASPNETCORE_URLS=https://+:443;http://+:80
     ports:
       - "80"
@@ -13,6 +14,9 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    networks:
+      - {{cookiecutter.ns_name}}-network
+
   {{cookiecutter.ns_name}}-sql-server-db:
     container_name: {{cookiecutter.ns_name}}-sql-server-db
     image: mcr.microsoft.com/mssql/server:2019-latest
@@ -21,23 +25,36 @@ services:
     environment:
         SA_PASSWORD: "Adasit#12"
         ACCEPT_EULA: "Y"
+    networks:
+      - {{cookiecutter.ns_name}}-network
+
   {{cookiecutter.ns_name}}-flyway:
-    depends_on: 
-    - "{{cookiecutter.ns_name}}-sql-server-db"
     container_name: {{cookiecutter.ns_name}}-flyway
-    build:
-      context: ./flyway
-      dockerfile: Dockerfile
+    environment:
+        - FLYWAY_USER=sa
+        - FLYWAY_PASSWORD=Adasit#12
+        - FLYWAY_URL=jdbc:sqlserver://{{cookiecutter.ns_name}}-sql-server-db:1433
+    image: flyway/flyway:latest
+    command: -locations=filesystem:/flyway/sql -connectRetries=60 migrate
     volumes:
-    - ./flyway/sql:/flyway/sql
-    - ./Local/database/dev-data:/flyway/sql/dev-data
-    - ./Local/database/conf:/flyway/conf
-    entrypoint: ["bash", "/flyway/wait-for-it.sh", "{{cookiecutter.ns_name}}-sql-server-db:1433", "-t", "240", "--", "flyway"]
-    command: "migrate"
-  {{cookiecutter.ns_name}}-wiremock:
+        - ./flyway/sql:/flyway/sql
+        - ./Local/database/dev-data:/flyway/sql/dev-data
+        - ./Local/database/conf:/flyway/conf
+    depends_on:
+        - {{cookiecutter.ns_name}}-sql-server-db
+    networks:
+      - {{cookiecutter.ns_name}}-network
+      
+    {{cookiecutter.ns_name}}-wiremock:
     container_name: {{cookiecutter.ns_name}}-wiremock
     image: rodolpheche/wiremock
     ports:
     - "8080:8080"
     volumes:
-    - ./Local/apis/:/home/wiremock  
+    - ./Local/apis/:/home/wiremock
+networks:
+    - {{cookiecutter.ns_name}}-network
+
+networks:
+  {{cookiecutter.ns_name}}-network:
+    driver: bridge

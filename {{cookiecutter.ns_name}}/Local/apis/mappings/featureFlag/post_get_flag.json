@@ -4,7 +4,7 @@
         "urlPathPattern": "/infra/featureflag/v1/flags"
     },
     "response": {
-        "data": "on",
+        "status": 200,
         "headers": {
             "Content-Type": "application/json"
         },

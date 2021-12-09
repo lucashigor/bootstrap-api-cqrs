@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   adasit.{{cookiecutter.project_name}}.webapi:
-    container_name: {{cookiecutter.ns_name}}-flyway
+    container_name: adasit.{{cookiecutter.ns_name}}.webapi
     image: ${DOCKER_REGISTRY-}adasit{{cookiecutter.ns_name}}webapi
     build:
       context: .

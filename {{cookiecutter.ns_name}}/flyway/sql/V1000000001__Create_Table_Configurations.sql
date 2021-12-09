@@ -1,4 +1,4 @@
-USE Notifications;
+USE {{cookiecutter.ns_name}}-principal;
 GO
 
 CREATE TABLE [dbo].[Configurations](

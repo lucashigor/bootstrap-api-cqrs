@@ -1,2 +1,2 @@
-CREATE DATABASE Notifications;
+CREATE DATABASE {{cookiecutter.ns_name}}-principal;
 GO
